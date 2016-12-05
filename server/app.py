@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     return 'Hello there'
 
-@app.route('/conda/name/<path:name>/institution/<path:institution>', methods=['GET', 'POST'])
+@app.route('/conda/registration/name/<path:name>/institution/<path:institution>', methods=['GET', 'POST'])
 def handle_registration(name, institution):
     user_info = dict(name=name, institution=institution)
     with sqlite3.connect('database.db') as con:

@@ -13,7 +13,7 @@ Country = {country}
 
 AMBERTOOLS_VERSION='16'
 # REGISTRATION_TEMPLATE = "http://ambermd.org/cgi-bin/AmberTools{version}-get.pl?conda=true&&Name={name}&Institution={institution}&City={city}&State={state_or_province}&Country={country}"
-REGISTRATION_TEMPLATE = "http://localhost:8000/conda/name/{name}/institution/{institution}"
+REGISTRATION_TEMPLATE = "http://localhost:8000/conda/registration/name/{name}/institution/{institution}"
 required_fields = ['name', 'institution', 'city', 'state_or_province', 'country']
 
 def main():
@@ -70,10 +70,7 @@ def main():
 
     user_dict['version'] = AMBERTOOLS_VERSION
     user_info = REGISTRATION_TEMPLATE.format(**user_dict)
-    print('user_info', user_info)
-
-    # requests.post(user_info)
-    requests.post(user_info, timeout=5.)
+    requests.post(user_info, timeout=10.)
     print("Enjoy. Happy computing")
 
 if __name__ == '__main__':
