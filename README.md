@@ -2,6 +2,7 @@
 
 ```bash
 cd server
+python create_database.py # only do once
 python app.py
 ```
 
