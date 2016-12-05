@@ -1,4 +1,4 @@
-1. Create a server
+# Create a server
 
 ```bash
 cd server
@@ -6,7 +6,7 @@ python create_database.py # only do once
 python app.py
 ```
 
-2. Try build and install dummy package and send user info to database.db
+# Try to build and to install a dummy package and to send user info to database.db
 
 ```bash
 cd client
@@ -14,5 +14,5 @@ conda build recipe
 conda install /path/to/the/new/package
 ```
 
-3. Check info. Open
+# Check user database
 `http://localhost:8000/list`
