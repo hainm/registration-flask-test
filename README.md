@@ -1,3 +1,8 @@
+# Require
+```
+conda install flask conda-build
+```
+
 # Create a server
 
 ```bash
