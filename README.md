@@ -11,7 +11,7 @@ python app.py
 ```bash
 cd client
 conda build recipe
-conda install /path/to/the/new/package
+conda install `conda build --output recipe`
 ```
 
 # Check user database
