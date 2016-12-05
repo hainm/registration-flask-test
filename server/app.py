@@ -4,8 +4,12 @@ import sqlite3
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'Hello there'
+
 @app.route('/conda/name/<path:name>/institution/<path:institution>', methods=['GET', 'POST'])
-def index(name, institution):
+def handle_registration(name, institution):
     user_info = dict(name=name, institution=institution)
     with sqlite3.connect('database.db') as con:
         cur = con.cursor()
